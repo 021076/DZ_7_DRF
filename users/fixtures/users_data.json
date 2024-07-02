@@ -1,0 +1,22 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$gksoOuqxeiXlpbgOKW5xoP$9flq3SmZvtakVm1M11kY5goE6OiRYSLxqMbiqRUEuSs=",
+      "last_login": "2024-07-02T08:21:53.606Z",
+      "is_superuser": true,
+      "first_name": "Admin",
+      "last_name": "SuperUser",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-07-02T08:21:20.905Z",
+      "email": "admin@admin.csu",
+      "phone": null,
+      "avatar": "",
+      "city": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

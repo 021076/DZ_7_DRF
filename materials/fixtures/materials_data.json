@@ -1,0 +1,22 @@
+[
+  {
+    "model": "materials.learningcourse",
+    "pk": 2,
+    "fields": {
+      "title": "Индустрия моды",
+      "description": "История, развитие и современные тенденции моды",
+      "imagery": ""
+    }
+  },
+  {
+    "model": "materials.lesson",
+    "pk": 1,
+    "fields": {
+      "name": "Материалы для одежды",
+      "description": "История производства материалов",
+      "course": 2,
+      "imagery": "",
+      "video": null
+    }
+  }
+]
