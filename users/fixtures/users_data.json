@@ -18,5 +18,75 @@
       "groups": [],
       "user_permissions": []
     }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "123456",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "Студент",
+      "last_name": "Первый",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-07-02T10:44:55Z",
+      "email": "st1_user@mail.ru",
+      "phone": "+79123698525",
+      "avatar": "",
+      "city": "Екатеринбург",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "369852",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "Студентка",
+      "last_name": "Вторая",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-07-02T10:47:14Z",
+      "email": "st2_user@mail.ru",
+      "phone": "+79452589645",
+      "avatar": "",
+      "city": "Урай",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.payments",
+    "pk": 1,
+    "fields": {
+      "user": 2,
+      "date_payment": "2024-07-02T11:12:46.581Z",
+      "course_paid": 2,
+      "payment_method": "Transfer"
+    }
+  },
+  {
+    "model": "users.payments",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "date_payment": "2024-07-02T11:13:01.913Z",
+      "course_paid": 3,
+      "payment_method": "Cash"
+    }
+  },
+  {
+    "model": "users.payments",
+    "pk": 3,
+    "fields": {
+      "user": 3,
+      "date_payment": "2024-07-02T11:13:14.863Z",
+      "course_paid": 2,
+      "payment_method": "Cash"
+    }
   }
 ]
