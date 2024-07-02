@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
       "password": "pbkdf2_sha256$720000$gksoOuqxeiXlpbgOKW5xoP$9flq3SmZvtakVm1M11kY5goE6OiRYSLxqMbiqRUEuSs=",
-      "last_login": "2024-07-02T08:21:53.606Z",
+      "last_login": "2024-07-02T11:43:18.840Z",
       "is_superuser": true,
       "first_name": "Admin",
       "last_name": "SuperUser",
@@ -64,7 +64,7 @@
     "pk": 1,
     "fields": {
       "user": 2,
-      "date_payment": "2024-07-02T11:12:46.581Z",
+      "date_payment": "2024-06-25",
       "course_paid": 2,
       "payment_method": "Transfer"
     }
@@ -74,7 +74,7 @@
     "pk": 2,
     "fields": {
       "user": 2,
-      "date_payment": "2024-07-02T11:13:01.913Z",
+      "date_payment": "2024-06-10",
       "course_paid": 3,
       "payment_method": "Cash"
     }
@@ -84,7 +84,7 @@
     "pk": 3,
     "fields": {
       "user": 3,
-      "date_payment": "2024-07-02T11:13:14.863Z",
+      "date_payment": "2024-07-01",
       "course_paid": 2,
       "payment_method": "Cash"
     }
