@@ -2,13 +2,14 @@ from rest_framework import viewsets, generics
 from materials.models import LearningCourse, Lesson
 from materials.serializers import LearningCourseSerializer, LessonSerializer
 
-#Реализации CRUD для курса через viewsets
+
+# Реализации CRUD для курса через viewsets
 class LearningCourseViewSet(viewsets.ModelViewSet):
     serializer_class = LearningCourseSerializer
     queryset = LearningCourse.objects.all()
 
 
-#Реализации CRUD для урока через generics
+# Реализации CRUD для урока через generics
 class LessonCreateAPIView(generics.CreateAPIView):
     serializer_class = LessonSerializer
 
@@ -28,4 +29,5 @@ class LessonListAPIView(generics.ListAPIView):
 
 
 class LessonRetrieveAPIView(generics.RetrieveAPIView):
-    queryset = LearningCourse.objects.all()
+    serializer_class = LessonSerializer
+    queryset = Lesson.objects.all()

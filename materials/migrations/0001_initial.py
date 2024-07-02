@@ -5,7 +5,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -18,7 +17,8 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=150, verbose_name='Название курса')),
                 ('description', models.TextField(verbose_name='Описание курса')),
-                ('imagery', models.ImageField(blank=True, null=True, upload_to='products/', verbose_name='Изображение(превью)')),
+                ('imagery',
+                 models.ImageField(blank=True, null=True, upload_to='products/', verbose_name='Изображение(превью)')),
             ],
             options={
                 'verbose_name': 'Учебный курс',
@@ -31,9 +31,11 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=150, verbose_name='Название урока')),
                 ('description', models.TextField(verbose_name='Описание урока')),
-                ('imagery', models.ImageField(blank=True, null=True, upload_to='products/', verbose_name='Изображение(превью)')),
+                ('imagery',
+                 models.ImageField(blank=True, null=True, upload_to='products/', verbose_name='Изображение(превью)')),
                 ('video', models.URLField(blank=True, max_length=25, null=True, verbose_name='Ссылка на видео')),
-                ('course', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='materials.learningcourse', verbose_name='Учебный курс')),
+                ('course', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='materials.learningcourse',
+                                             verbose_name='Учебный курс')),
             ],
             options={
                 'verbose_name': 'Урок',
