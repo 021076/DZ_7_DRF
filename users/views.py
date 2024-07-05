@@ -2,8 +2,6 @@ from rest_framework.filters import OrderingFilter
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated
-
-from config.paginators import AppPagination
 from users.models import Payments, User
 from users.serializers import PaymentsSerializer, UserSerializer
 
@@ -14,7 +12,6 @@ class PaymentsListAPIView(generics.ListAPIView):
     filter_backends = [DjangoFilterBackend, OrderingFilter]
     filterset_fields = ('course_paid', 'payment_method',)
     ordering_fields = ('date_payment',)
-    pagination_class = AppPagination
 
 
 class UserCreateAPIView(generics.CreateAPIView):
@@ -42,7 +39,6 @@ class UserListAPIView(generics.ListAPIView):
     permission_classes = [IsAuthenticated]
     serializer_class = UserSerializer
     queryset = User.objects.all()
-    pagination_class = AppPagination
 
 
 class UserRetrieveAPIView(generics.RetrieveAPIView):

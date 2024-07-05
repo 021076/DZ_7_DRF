@@ -1,7 +1,6 @@
 from rest_framework import viewsets, generics
 from rest_framework.permissions import IsAuthenticated
-
-from config.paginators import AppPagination
+from materials.paginators import AppPagination
 from materials.models import LearningCourse, Lesson
 from materials.serializers import LearningCourseSerializer, LessonSerializer
 from users.permissions import IsModerator, IsOwner
