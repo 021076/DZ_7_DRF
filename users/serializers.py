@@ -13,5 +13,11 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = '__all__'
 
-    def create(self, validated_data):
-        return User.objects.create(**validated_data)
+    def update(self, user, validated_data):
+        password = validated_data.pop('password', None)
+        if password is not None:
+            user.set_password(password)
+        for field, value in validated_data.items():
+            setattr(user, field, value)
+        user.save()
+        return user

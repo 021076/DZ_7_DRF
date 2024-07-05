@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
       "password": "pbkdf2_sha256$720000$gksoOuqxeiXlpbgOKW5xoP$9flq3SmZvtakVm1M11kY5goE6OiRYSLxqMbiqRUEuSs=",
-      "last_login": "2024-07-02T11:43:18.840Z",
+      "last_login": "2024-07-04T16:40:32.624Z",
       "is_superuser": true,
       "first_name": "Admin",
       "last_name": "SuperUser",
@@ -23,7 +23,7 @@
     "model": "users.user",
     "pk": 2,
     "fields": {
-      "password": "123456",
+      "password": "pbkdf2_sha256$720000$TZq5oqN1gZ9JdK1lri3XM4$wh7pmmc/JLr9knpYu+3JaLBxOaTB6OacmllwQMk0GSk=",
       "last_login": null,
       "is_superuser": false,
       "first_name": "Студент",
@@ -43,7 +43,7 @@
     "model": "users.user",
     "pk": 3,
     "fields": {
-      "password": "369852",
+      "password": "pbkdf2_sha256$720000$LdxqcT6Qxt0gk5xodAzFBN$JpyAhtca5jg09dkWEcr/9Bf70VleY4OUUMEr2loRBq4=",
       "last_login": null,
       "is_superuser": false,
       "first_name": "Студентка",
@@ -56,6 +56,110 @@
       "avatar": "",
       "city": "Урай",
       "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$wghDJOCzXsRTFQQ394ILYF$60uuLqwJ8CYg+6QPCQinwF/Zqi2Y6eSW6nn1WlJKWqE=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "Третий",
+      "last_name": "Слушатель",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-07-04T12:35:30.184Z",
+      "email": "st3_user@mail.ru",
+      "phone": "+79124569878",
+      "avatar": "",
+      "city": "Сургут",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$dvaEBjiLwqlV1GExOMLcNd$dDqk1/On1iFQK7VZWGK4/sOghdnkIqrlRBjP4MJ5KAg=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "Сотрудник",
+      "last_name": "Первый",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-07-04T13:11:56Z",
+      "email": "staff_001@mail.ru",
+      "phone": null,
+      "avatar": "",
+      "city": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$jk4EYUXYHSVZeNPlDfknEU$SDWTkchGw38Cj9zXUW2O10WZICQtgAN+HSRxBESjw78=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "Сотрудница",
+      "last_name": "Вторая",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-07-04T13:13:36Z",
+      "email": "staff_002@mail.ru",
+      "phone": null,
+      "avatar": "",
+      "city": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 7,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$eriJlDMofjRFZYehmMzlMw$z2eNfjUP1k+fZ7j3fNHMHiqR04BUwgCRLqFUik3hO8w=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "Пользователь",
+      "last_name": "Следующий",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-07-04T15:21:08Z",
+      "email": "some_user@mail.ru",
+      "phone": null,
+      "avatar": "",
+      "city": null,
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$vv6qHvblGxy81H5GmqgZSb$H4pnZBQqn1lMIfYq/X174QkoQ7AA46jH4n3pHz+t2Ug=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "Пользователь",
+      "last_name": "Новенький",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-07-04T15:40:39Z",
+      "email": "newuser@mail.ru",
+      "phone": null,
+      "avatar": "",
+      "city": null,
+      "groups": [
+        1
+      ],
       "user_permissions": []
     }
   },
