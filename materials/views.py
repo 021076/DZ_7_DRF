@@ -1,8 +1,10 @@
 from rest_framework import viewsets, generics
+from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
 from materials.paginators import AppPagination
-from materials.models import LearningCourse, Lesson
-from materials.serializers import LearningCourseSerializer, LessonSerializer
+from materials.models import LearningCourse, Lesson, Subscription
+from materials.serializers import LearningCourseSerializer, LessonSerializer, SubscriptionSerializer
 from users.permissions import IsModerator, IsOwner
 
 
@@ -67,3 +69,26 @@ class LessonRetrieveAPIView(generics.RetrieveAPIView):
     serializer_class = LessonSerializer
     queryset = Lesson.objects.all()
     permission_classes = [IsAuthenticated, ]
+
+
+class SubscriptionCreateAPIView(generics.CreateAPIView):
+    serializer_class = SubscriptionSerializer
+
+    def post(self, request, *args, **kwargs):
+        user = self.request.user
+        course_id = self.request.data.get('course')
+        course_obj = get_object_or_404(LearningCourse, pk=course_id)
+        subscription_obj = Subscription.objects.filter(user=user, course=course_obj)
+        if subscription_obj.exists():
+            subscription_obj.delete()
+            message = 'Подписка удалена'
+        else:
+            Subscription.objects.create(user=user, course=course_obj)
+            message = 'Подписка добавлена'
+        return Response({"message": message})
+
+
+class SubscriptionDestroyAPIView(generics.DestroyAPIView):
+    serializer_class = SubscriptionSerializer
+    queryset = Subscription.objects.all()
+    permission_classes = [IsAuthenticated]
