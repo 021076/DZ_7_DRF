@@ -1,7 +1,7 @@
 [
   {
     "model": "materials.learningcourse",
-    "pk": 2,
+    "pk": 1,
     "fields": {
       "title": "Индустрия моды",
       "description": "История, развитие и современные тенденции моды",
@@ -11,7 +11,7 @@
   },
   {
     "model": "materials.learningcourse",
-    "pk": 3,
+    "pk": 2,
     "fields": {
       "title": "Оборудование и инструменты",
       "description": "Оборудование и инструменты для работы дизайнера, закройщика, портного",
@@ -21,7 +21,7 @@
   },
   {
     "model": "materials.learningcourse",
-    "pk": 4,
+    "pk": 3,
     "fields": {
       "title": "Технология кроя",
       "description": "Построение чертежей и моделирование на основе эскизов дизайнера,",
@@ -35,7 +35,7 @@
     "fields": {
       "name": "Материалы для одежды",
       "description": "История производства материалов",
-      "course": 2,
+      "course": 1,
       "imagery": "",
       "video": null,
       "owner": null
@@ -47,7 +47,7 @@
     "fields": {
       "name": "Национальная одежда",
       "description": "Национальная одежда",
-      "course": 2,
+      "course": 1,
       "imagery": "",
       "video": null,
       "owner": null
@@ -59,7 +59,7 @@
     "fields": {
       "name": "Инструменты дизайнера",
       "description": "Блокнот, карандаш и фантазия",
-      "course": 3,
+      "course": 2,
       "imagery": "",
       "video": null,
       "owner": null
@@ -71,7 +71,7 @@
     "fields": {
       "name": "Инструменты закройщика",
       "description": "Инструменты закройщика",
-      "course": 3,
+      "course": 2,
       "imagery": "",
       "video": null,
       "owner": null
@@ -83,7 +83,7 @@
     "fields": {
       "name": "Фурнитура",
       "description": "Фурнитура как элемент дизайна одежды",
-      "course": 3,
+      "course": 2,
       "imagery": "",
       "video": null,
       "owner": null
@@ -95,7 +95,7 @@
     "fields": {
       "name": "Покрой детской одежды",
       "description": "Покрой детской одежды. Особенности детской фигуры",
-      "course": 4,
+      "course": 3,
       "imagery": "",
       "video": null,
       "owner": null
@@ -107,7 +107,7 @@
     "fields": {
       "name": "Покрой женской одежды",
       "description": "Покрой женской одежды. Особенности женской фигуры",
-      "course": 4,
+      "course": 3,
       "imagery": "",
       "video": null,
       "owner": 5
@@ -119,7 +119,7 @@
     "fields": {
       "name": "Покрой мужской одежды",
       "description": "Покрой мужской одежды. Особенности мужской фигуры",
-      "course": 4,
+      "course": 3,
       "imagery": "",
       "video": null,
       "owner": 5
