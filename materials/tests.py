@@ -9,11 +9,11 @@ class LessonsAPITestCase(APITestCase):
     def setUp(self):
         self.user = User.objects.create(email='test@user.com', password='123456')
         self.client = APIClient()
-        self.client.force_authenticate(self.user)
+        self.client.force_authenticate(user=self.user)
         self.course = LearningCourse.objects.create(
-            title="Тестовый курс", description="Тестовый курс для тестирования")
+            title="Тестовый курс", description="Тестовый курс для тестирования", owner=self.user)
         self.lesson = Lesson.objects.create(
-            name="Урок", description="Описание урока", course=self.course)
+            name="Урок", description="Описание урока", course=self.course, owner=self.user)
 
     def test_lesson_create(self):
         """Юниттест создания урока"""
@@ -39,7 +39,7 @@ class LessonsAPITestCase(APITestCase):
             {'count': 1, 'next': None, 'previous': None, 'results': [
                 {'id': self.lesson.pk, 'name': 'Урок', 'description': 'Описание урока', 'imagery': None, 'video': None,
                  'course': self.course.pk,
-                 'owner': None}]}
+                 'owner': self.user.pk}]}
         )
 
     def test_lesson_retrieve(self):
