@@ -9,6 +9,6 @@ class UserAdmin(admin.ModelAdmin):
 
 @admin.register(Payments)
 class PaymentsAdmin(admin.ModelAdmin):
-    list_display = ('id', 'user', 'date_payment', 'course_paid', 'payment_method',)
-    list_filter = ('user', 'course_paid',)
-    search_fields = ('user', 'course_paid', 'payment_method',)
+    list_display = ('id', 'user', 'date_payment', 'course', 'payment_method', 'amount')
+    list_filter = ('user', 'course',)
+    search_fields = ('user', 'course', 'payment_method',)
