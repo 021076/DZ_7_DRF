@@ -185,3 +185,16 @@ STRIPE_API_KEY = os.getenv('STRIPE_API_KEY')
 
 CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'
 CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/0'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = os.getenv('HOST_MAIL')
+EMAIL_PORT = os.getenv('HOST_MAIL_PORT')
+EMAIL_USE_TLS = os.getenv('HOST_MAIL_TLS')
+EMAIL_USE_SSL = os.getenv('HOST_MAIL_SSL')
+EMAIL_HOST_USER = os.getenv('HOST_USER_MAIL')
+EMAIL_HOST_PASSWORD = os.getenv('HOST_PASSWORD_MAIL')
+EMAIL_SERVER = EMAIL_HOST_USER
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+EMAIL_ADMIN = EMAIL_HOST_USER
+
