@@ -1,0 +1,128 @@
+[
+  {
+    "model": "materials.learningcourse",
+    "pk": 1,
+    "fields": {
+      "title": "Индустрия моды",
+      "description": "История, развитие и современные тенденции моды",
+      "imagery": "",
+      "owner": null
+    }
+  },
+  {
+    "model": "materials.learningcourse",
+    "pk": 2,
+    "fields": {
+      "title": "Оборудование и инструменты",
+      "description": "Оборудование и инструменты для работы дизайнера, закройщика, портного",
+      "imagery": "",
+      "owner": null
+    }
+  },
+  {
+    "model": "materials.learningcourse",
+    "pk": 3,
+    "fields": {
+      "title": "Технология кроя",
+      "description": "Построение чертежей и моделирование на основе эскизов дизайнера,",
+      "imagery": "",
+      "owner": null
+    }
+  },
+  {
+    "model": "materials.lesson",
+    "pk": 1,
+    "fields": {
+      "name": "Материалы для одежды",
+      "description": "История производства материалов",
+      "course": 1,
+      "imagery": "",
+      "video": null,
+      "owner": null
+    }
+  },
+  {
+    "model": "materials.lesson",
+    "pk": 2,
+    "fields": {
+      "name": "Национальная одежда",
+      "description": "Национальная одежда",
+      "course": 1,
+      "imagery": "",
+      "video": null,
+      "owner": null
+    }
+  },
+  {
+    "model": "materials.lesson",
+    "pk": 3,
+    "fields": {
+      "name": "Инструменты дизайнера",
+      "description": "Блокнот, карандаш и фантазия",
+      "course": 2,
+      "imagery": "",
+      "video": null,
+      "owner": null
+    }
+  },
+  {
+    "model": "materials.lesson",
+    "pk": 4,
+    "fields": {
+      "name": "Инструменты закройщика",
+      "description": "Инструменты закройщика",
+      "course": 2,
+      "imagery": "",
+      "video": null,
+      "owner": null
+    }
+  },
+  {
+    "model": "materials.lesson",
+    "pk": 5,
+    "fields": {
+      "name": "Фурнитура",
+      "description": "Фурнитура как элемент дизайна одежды",
+      "course": 2,
+      "imagery": "",
+      "video": null,
+      "owner": null
+    }
+  },
+  {
+    "model": "materials.lesson",
+    "pk": 6,
+    "fields": {
+      "name": "Покрой детской одежды",
+      "description": "Покрой детской одежды. Особенности детской фигуры",
+      "course": 3,
+      "imagery": "",
+      "video": null,
+      "owner": null
+    }
+  },
+  {
+    "model": "materials.lesson",
+    "pk": 7,
+    "fields": {
+      "name": "Покрой женской одежды",
+      "description": "Покрой женской одежды. Особенности женской фигуры",
+      "course": 3,
+      "imagery": "",
+      "video": null,
+      "owner": 5
+    }
+  },
+  {
+    "model": "materials.lesson",
+    "pk": 8,
+    "fields": {
+      "name": "Покрой мужской одежды",
+      "description": "Покрой мужской одежды. Особенности мужской фигуры",
+      "course": 3,
+      "imagery": "",
+      "video": null,
+      "owner": 5
+    }
+  }
+]
