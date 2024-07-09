@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from materials.paginators import AppPagination
 from materials.models import LearningCourse, Lesson, Subscription
 from materials.serializers import LearningCourseSerializer, LessonSerializer, SubscriptionSerializer
+from materials.tasks import send_mail_update_course
 from users.permissions import IsModerator, IsOwner
 
 
@@ -33,6 +34,11 @@ class LearningCourseViewSet(viewsets.ModelViewSet):
         elif self.action == 'destroy':
             self.permission_classes = [~IsModerator | IsOwner, ]
         return super().get_permissions()
+
+    def perform_update(self, serializer):
+        instance = serializer.save()
+        send_mail_update_course.delay(instance.id)
+        return instance
 
 
 # Реализации CRUD для урока через generics
